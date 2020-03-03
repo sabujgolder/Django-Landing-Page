@@ -1,0 +1,255 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul,nav{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  /* cursor: pointer; */
+  color: inherit;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color : white;
+  padding: 35px 100px 0;
+}
+
+header h2{
+  text-transform: uppercase;
+  font-size: 40px;
+
+}
+
+header nav{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+header nav li{
+  margin: 0px 10px;
+}
+
+header nav li:first-child{
+  margin-left: 0;
+}
+
+header nav li:last-child{
+  margin-right:10px;
+}
+
+@media(max-width:1000px){
+  header {
+    padding: 20px 50px;
+  }
+}
+
+@media(max-width:700px){
+  header {
+    flex-direction: column;
+  }
+
+  header h2{
+    margin-bottom: 15px;
+  }
+
+  header nav li{
+    margin:0 7px;
+  }
+}
+
+section{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  padding: 110px 100px;
+}
+
+@media(max-width:1000px){
+  section {
+    padding: 100px 50px;
+  }
+}
+
+@media(max-width:600px){
+  section {
+    padding: 125px 30px;
+  }
+}
+
+section p{
+  max-width : 800px;
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 0 20px;
+  line-height: 2;
+}
+
+.banner-area{
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.banner-area .banner-img{
+  background-image: url(/static/emailapp/image.jpeg );
+  position: absolute;
+  top:0;
+  left: 0;
+  width :100%;
+  height:100%;
+  -webkit-backgroung-size:cover;
+  background-size: cover;
+  z-index:-1;
+}
+
+.banner-area .banner-img:after{
+  content: '';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height : 100%;
+  background-color: #000;
+  opacity: .4;
+
+}
+
+.banner-area h1{
+  margin-bottom: 15px;
+  font-size: 65px;
+  /* font-family: merienda; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.banner-area h3{
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.banner-area a.banner-btn{
+  padding: 15px 35px;
+  background: crimson;
+  border-radius:50px;
+  text-rendering: uppercase;
+}
+
+@media(max-width:800px){
+  .banner-area {
+    min-height: 600px;
+  }
+  .banner-area h1{
+    font-size: 32px;
+  }
+  .banner-area h3{
+    font-size:20px;
+  }
+  .banner-area a.banner-btn{
+    padding: 15px 40px;
+  }
+}
+
+ul.about-content{
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-content li{
+  padding: 40px;
+  height: 290px;
+  background-clip:content-box;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-left{
+  flex-basis: 30%;
+  background-image: url(/static/emailapp/about.jpg );
+}
+
+.about-right{
+  flex-basis: 70%;
+}
+
+.about-area p{
+  max-width: 800px;
+  margin-bottom:35px;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 0;
+}
+
+.section-title{
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-botton: 5%;
+
+}
+
+.about-right h2{
+  margin-bottom: 3%;
+}
+
+.about-btn{
+  padding:15px 35px;
+  background: crimson;
+  border-radius: 50px;
+  color: #fff;
+}
+
+@media (max-width: 1000px){
+  .about-left,
+  .about-right{
+    flex-basis: 100%
+  }
+  .about-content li{
+    padding: 8px;
+  }
+}
+
+.container{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  padding: 110px 100px;
+}

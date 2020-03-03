@@ -1,0 +1,11 @@
+{% extends "emailapp/base.html" %}
+{% block content %}
+        <form class="form" method="post">
+          {% csrf_token %}
+            <h2>CONTACT US</h2>
+              <p type="Name:" >{{ form.Name }}</p>
+              <p type="Email:">{{ form.Email }}</p>
+              <p type="Message:">{{ form.Description }}</p>
+            <button>Send Message</button>
+        </form>
+{% endblock %}

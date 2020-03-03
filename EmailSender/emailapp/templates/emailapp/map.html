@@ -1,0 +1,16 @@
+{% extends "emailapp/base.html" %}
+{% block content %}
+    <h3 id="h3">Find Us Below</h3>
+    <div id="map">
+      <script>
+          function initMap() {
+            var uluru = {lat: 23.815009, lng: 90.425609};
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+            var marker = new google.maps.Marker({position: uluru, map: map});
+          }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key='write down your api key'&callback=initMap">
+        </script>
+    </div>
+{% endblock %}

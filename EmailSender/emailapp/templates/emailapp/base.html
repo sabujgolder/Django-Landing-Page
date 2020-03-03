@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Law Support Solution|We Care</title>
+    <link rel="stylesheet" href="{% static 'emailapp/main.css' %}">
+    <link rel="stylesheet" href="{% static 'emailapp/form.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      #h3{
+        margin top:10px;
+      }
+
+      #map {
+        margin-top: -20px;
+        height: 400px;
+        width: 70%;
+        border: white;
+       }
+    </style>
+  </head>
+  <body>
+      <header>
+        <h2> <a href="{% url 'home' %}"> WECARE </a> </h2>
+        <nav>
+          <li ><a  href="{% url 'home' %}">Home</a></li>
+          <li ><a  href="{% url 'map' %}">Location</a></li>
+        </nav>
+      </header>
+          <section class="banner-area">
+                  <div class="banner-img"></div>
+          {% block content %}
+                  <h1>Looking For Lawyers!</h1>
+                  <h3>Hire professionals or make appointments</h3>
+                  <a href="#" class="banner-btn">Contact Us</a>
+          {% endblock %}
+          </section>
+          <section class="about-area" id="about">
+            <h3 class="section-title" >About Us</h3>
+            <ul class="about-content">
+              <li class="about-left"></li>
+              <li class="about-right">
+                <h2>What We Do</h2>
+                <p>We provide lawyers as well as legal advices acccording to client request.Your
+                  identity and confidentiality will be highly protorized.Leave a message by clicking
+                  on.
+                </p>
+                <a href="{% url 'map' %}" class="about-btn">Find Us</a>
+              </li>
+            </ul>
+          </section>
+  </body>
+</html>
